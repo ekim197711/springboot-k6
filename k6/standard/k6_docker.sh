@@ -1,1 +1,2 @@
-docker run --network host -i loadimpact/k6 run -u 5 -d 10s -< script.js
+cd $(dirname $0)
+docker run --network host --rm -i loadimpact/k6 run -u 2 -d 5s -< script.js > somefile.out
